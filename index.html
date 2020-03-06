@@ -2,7 +2,12 @@
 <html>
 <head>
 	<title>Minecraft</title>
+	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+	<!--for mobile devices-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<style>
 		html, body {
 			background-color: #1D70B7;
@@ -18,6 +23,7 @@
 			border-bottom: white solid 3px;
 			display: block;
 			position: fixed;
+			box-shadow: 0 0 30px black;
 
 		}
 
@@ -56,12 +62,20 @@
 			background-color: rgba(255,255,255,0.8);
 			border-radius: 15px;
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: center;
 			align-items: center;
 			padding: 10px;
 			border: white solid 3px;
 			box-shadow: 0 0 30px black;
+			transition: ease all 1s;
 		}
+/*
+		.nube > div > p {
+			width: 300px;
+			word-wrap: break-word;
+		}
+		*/
 
 		.contenedor {
 			display: flex;
@@ -95,10 +109,6 @@
 			background-color: #36A9E0;
 		}
 
-		@media only screen and (max-width: 600px) {
-			/*TODO*/
-		}
-
 		.resaltame {
 			font-weight: bold;
 			font-size: 20px;
@@ -114,7 +124,39 @@
 		    color: hotpink;
 		  }
 		}
-}
+
+
+		@media only screen and (max-width: 800px) {
+			/*TODO*/
+			nav h3 {
+				font-size: 20px;
+				line-height: 2;
+				padding: 15px;
+			}
+
+			section > div {
+				height: 300px;
+			}
+
+			.nube {
+				width: 85%;
+				transition: ease all 1s;
+				height: 80px;
+			}
+
+			#logo {
+				height: 120px;
+			}
+
+			section > div > div > div {
+				font-size: 7px;
+			}
+
+			.resaltame {
+				font-size: 12px;
+			}
+		}
+	}	
 	</style>
 
 </head>
