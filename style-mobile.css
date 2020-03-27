@@ -1,0 +1,128 @@
+@media only screen and (max-width: 800px) {
+    /*TODO*/
+    nav h3 {
+        font-size: 20px;
+        line-height: 2;
+        padding: 15px;
+    }
+
+    nav {
+        height: 110px;
+    }
+
+    content {
+        top: 110px;
+    }
+
+    .hero {
+        height: 300px;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment: initial;
+    }
+
+    .nube {
+        width: auto;
+        transition: ease all 1s;
+        height: 80px;
+    }
+
+    #logo > div {
+        height: auto;
+        width: 300px;
+    }
+
+    .button-start {
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    section > div > div > div {
+        font-size: 7px;
+    }
+
+    .resaltame {
+        font-size: 12px;
+    }
+
+    .body > div:first-child {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .body > div:first-child {
+        height: auto;
+    }
+
+    .parrafo { 
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+
+    .grid-imagenes {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .text-presumir {
+        font-size: 12px;
+    }
+
+    footer { 
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    footer p {
+        width: auto;
+        height: auto;
+        margin-right: 50px;
+    }
+    .rrss {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }

@@ -9,6 +9,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style-mobile.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="motor.js"></script>
+
 
 
 
@@ -17,15 +22,15 @@
 	<nav>
 		<h3>Minecraft JEDI Server</h3>
 	</nav>
-	<section>
+	<section class="content">
 		<div class="hero">
 			<div class="contenedor">
-				<div id="logo"></div>
+				<div id="logo"><div></div></div>
 				<div class="nube">
 					<div>
 						<p>Version: 1.15.2</p>
 						<p>Para jugar descarga el juego y conéctate usando: </p>
-						<p class="resaltame">minecraft.jediupc.com</p>
+						<p class="resaltame" onclick="copy()">minecraft.jediupc.com</p>
 						<p>Hasta 128 jugadores simultaneos</p>
 					</div>
 				</div>
@@ -71,43 +76,102 @@
 						<p class="text">Una iniciativa de JEDI Junior Empresa</p>
 					</div>
 					<div class="parrafo">
-						<p></p>Servidor multijugador con plugins en modo supervivencia con el objetivo de crear el Campus Nord.
-						<ul>
-							<li>AUpdater</li>
-							<li>DeadChest</li>
-							<li>DependencyDownloader</li>
-							<li>Dynmap</li>
-							<li>HolographicDisplays</li>
-							<li>LandClaiming</li>
-							<li>LoginSecurity</li>
-							<li>MarriageMaster</li>
-							<li>Multiverse-Core</li>
-							<li>NametagEdit</li>
-							<li>PlugMan</li>
-							<li>PluginConstructorAPI</li>
-							<li>PluginMetrics</li>
-							<li>SetHomes</li>
-							<li>Shopkeepers</li>
-							<li>Timber</li>
-							<li>Vault</li>
-							<li>WorldBorder</li>
-							<li>WorldEdit</li>
-							<li>WorldGuard</li>
-							<li>bStats</li>
-						</ul>
+						<div class="sub-parrafo">
+
+							<div class="sub-sub-parrafo">
+								<h2>Motivación</h2>
+								<p>El objetivo de este servidor es pasarlo bien durante estos días de confinamiento con los estudiantes de la FIB y los miembros de JEDI. Es un servidor multijugador con plugins en modo supervivencia.</p>
+							</div>
+
+							<div class="sub-sub-parrafo">
+								<h2>¿Cómo entrar?</h2>
+								<p>En el menú principal, accedes a la opción "Mulijugador" y añades un nuevo servidor. Especifica la IP como <span id="copiame" onclick="copy()" class="resaltame" style="font-size: 12px;">minecraft.jediupc.com</span>.</p>
+							</div>
+							<div id="snackbar">Link copiado!</div>
+
+							<div class="sub-sub-parrafo">
+								<h2>Cosas a destacar</h2>
+								<p>Para hacer el gameplay más interesante, hemos añadido muchos plugins originales, entre los cuales podemos destacar ...</p>
+								<ul>
+									<li>LandClaiming: puedes proteger tus tierras!</li>
+									<li>Dynmap: puedes ver en vivo lo que está pasando en el mapa!</li>
+									<li>SetHome: puedes crear, borrar y teletransportarte a todas tus casas!</li>
+									<li>MarriageMaster: puedes casarte! (= Compartes inventario)</li>
+								</ul>
+							</div>
+							
+						</div>
+						<div class="sub-parrafo">
+							<div class="sub-sub-parrafo">
+								<h2>Lista completa de plugins disponibles</h2>
+								<ul>
+									<li>AUpdater</li>
+									<li>DeadChest</li>
+									<li>DependencyDownloader</li>
+									<li>Dynmap</li>
+									<li>HolographicDisplays</li>
+									<li>LandClaiming</li>
+									<li>LoginSecurity</li>
+									<li>MarriageMaster</li>
+									<li>Multiverse-Core</li>
+									<li>NametagEdit</li>
+									<li>PlugMan</li>
+									<li>PluginConstructorAPI</li>
+									<li>PluginMetrics</li>
+									<li>SetHomes</li>
+									<li>Shopkeepers</li>
+									<li>Timber</li>
+									<li>Vault</li>
+									<li>WorldBorder</li>
+									<li>WorldEdit</li>
+									<li>WorldGuard</li>
+									<li>bStats</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 
+			<div id="surprise-section" class="info-section">
+				<div>
+					<div>
+						<p class="text">Lugares emblemáticos</p>
+					</div>
+
+					
+					<div class="grid-imagenes">
+						<img class="imagen" src="tripadvisor/villapolicia-small.png">
+						<img class="imagen" src="tripadvisor/tunelesaciro-small.png">
+						<img class="imagen" src="tripadvisor/sugar-small.png">
+						<!--<img class="imagen" src="tripadvisor/templo-small.png">-->
+						<img class="imagen" src="tripadvisor/granjazombi-small.png">
+						
+					</div>
+					<div>
+						<p class="text-presumir">Si quieres presumir de tu lugar emblemático y que aparezca aquí, cuélgalo en RRSS mencionando a JEDI!</p>
+					</div>
+				</div>
+			</div>
+
+
+			<footer>
+				<div>
+					<p class="text-footer">© 2020 Jedi Junior Empresa | All rights reserved.</p>
+				</div>
+
+				<div class="rrss">
+					<a href="https://ca-es.facebook.com/JediJrUPC/"><i class="fa fa-facebook-f"></i></a>
+					<a href="https://twitter.com/jediupc"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/jediupc/"><i class="fa fa-instagram"></i></a>
+				</div>
+			
+			</footer>
 		</section>
-
-
 		
-
 		
 	</section>
-	<footer>
-		
-	</footer>
+	
+	
 </body>
 </html>

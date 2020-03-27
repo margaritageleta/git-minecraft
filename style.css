@@ -11,8 +11,16 @@ nav {
     margin: 0;
     /*border-bottom: white solid 3px;*/
     display: block;
-    position: fixed;
+    position: absolute;
     box-shadow: 0 0 30px black;
+    z-index: 100;
+    height: 90px;
+    display: block;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+
 
 }
 
@@ -20,13 +28,25 @@ nav h3 {
     color: white;
     padding: 25px;
     margin: 0;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;
     text-shadow: -2px 0 grey, 0 5px black, 2px 0 grey, 0 -2px white;
     font-size: 30px;
 }
 
+.content {
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    right: 0px;
+    overflow: auto;
+    bottom:0;
+    scroll-behavior: smooth;
+}
+
 section {
     width: 100%;
+    position: absolute;
 
 }
 
@@ -46,7 +66,7 @@ section {
 }
 
 .nube {
-    width: 50%;
+    width: auto;
     background-color: rgba(255,255,255,0.8);
     border-radius: 15px;
     display: flex;
@@ -66,27 +86,35 @@ section {
 */
 
 .contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: auto;
+
+    margin-bottom: 50px;
 }
 
 section > div > div > div {
     background-color: transparent;
     width: 100%;
     height: 100%;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;;
     font-size: 12px;
     text-align: center;
     color: black;
 }
 
 #logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#logo > div {
     background-image: url("Minecraft-Logo.png");
     background-repeat:   no-repeat;
-    background-position: center center;     
+    background-position: center;     
     background-size: cover;
 
     width: 800px;
@@ -126,48 +154,6 @@ section > div > div > div {
     grid-gap: 0;
 }
 
-
-@media only screen and (max-width: 800px) {
-    /*TODO*/
-    nav h3 {
-        font-size: 20px;
-        line-height: 2;
-        padding: 15px;
-    }
-
-    .hero {
-        height: 300px;
-    }
-
-    .nube {
-        width: 85%;
-        transition: ease all 1s;
-        height: 80px;
-    }
-
-    #logo {
-        height: 120px;
-    }
-
-    section > div > div > div {
-        font-size: 7px;
-    }
-
-    .resaltame {
-        font-size: 12px;
-    }
-
-    .body > div:first-child {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
-
-    .body > div:first-child {
-        height: auto;
-    }
-
-}
-
 .button {
     width: 100%;
     height: 100%;
@@ -175,7 +161,7 @@ section > div > div > div {
     display: inline-block;
     padding: 7px 10px;
     font-size: 40px;
-    font-family:'Press Start 2P', cursive;
+    font-family:'Press Start 2P', sans-serif;;
     font-weight: bold;
     font-variant: small-caps;
     cursor: pointer;
@@ -253,7 +239,7 @@ button > p {
     color: white;
     padding: 0;
     margin: 0;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;;
     text-shadow: -2px 0 grey, 0 5px black, 2px 0 grey, 0 -2px white;
 }
 
@@ -280,10 +266,17 @@ iframe {
     margin: 40px;
 }
 
+#info-section {
+    background-image: url("obsidiana.png");
+}
+
+#surprise-section {
+    background-image: url("fondo.png");
+}
+
 .info-section {
     width: 100%;
     height: auto;
-    background-image: url("fondo.png");
     display: flex;
     justify-content: center;
     align-content: center;
@@ -291,9 +284,10 @@ iframe {
 
 .info-section > div {
     margin: 40px;
+    margin-top: 0;
     width: 100%;
     height: auto;
-    background-color:#333;
+    background-color: transparent;
     border-radius: 20px;
 
     display: grid;
@@ -317,7 +311,7 @@ iframe {
     color: white;
     /*padding: 25px;*/
     margin: 0;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', sans-serif;;
     text-shadow: -2px 0 grey, 0 5px black, 2px 0 grey, 0 -2px white;
     font-size: 25px;
     /*text-align: center;*/
@@ -335,10 +329,88 @@ iframe {
     width: auto;
     height: auto;
     font-size: 12px;
-    text-align: justify;
+    text-align: left;
     padding-left: 20px;
     padding-right: 20px;
+    background-image: url("NetherPortal.gif");
 
-    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px
 }
+
+.sub-parrafo {
+    background-color: transparent;
+    /*padding-left: 10px;
+    padding-right: 10px;*/
+    padding-bottom: 15px;
+    width: auto;
+}
+
+.sub-sub-parrafo {
+    background-color: rgba(0,0,0,0.6);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 3px;
+}
+
+.grid-imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    /*grid-template-rows: 1fr 1fr; */
+    grid-gap: 20px;
+}
+
+.imagen {
+    width: 100%;
+    height: auto;
+}
+
+.text-presumir {
+    color: white;
+    line-height: 2;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 15px;
+}
+
+.text-footer {
+    color: white;
+    line-height: 2;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 12px;
+}
+
+footer {
+    height: 150px;
+    width: 100%;
+    background-image: url("fondo2.png");
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > div {
+    background-color:transparent;
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.rrss {
+    width: 250px;
+    color: white;
+    font-size: 50px;
+}
+
+.rrss a {
+    color: white;
+}
+
+
+
 
