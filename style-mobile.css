@@ -15,7 +15,7 @@
     }
 
     .hero {
-        height: 300px;
+        height: 450px;
         padding-top: 0;
         padding-bottom: 0;
 
@@ -28,7 +28,7 @@
     .nube {
         width: auto;
         transition: ease all 1s;
-        height: 80px;
+        
     }
 
     #logo > div {
@@ -37,8 +37,7 @@
     }
 
     .button-start {
-        padding-bottom: 5px;
-        padding-top: 5px;
+        padding: 0;
     }
 
     section > div > div > div {
@@ -50,8 +49,8 @@
     }
 
     .body > div:first-child {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     .body > div:first-child {
@@ -61,6 +60,13 @@
     .parrafo { 
         grid-template-columns: 1fr;
         grid-gap: 0;
+        font-size: 10px;
+    }
+
+    .normas-parrafo { 
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        font-size: 10px;
     }
 
     .grid-imagenes {
@@ -73,19 +79,42 @@
         font-size: 12px;
     }
 
+    .text {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
     footer { 
         display: grid;
         grid-template-rows: 1fr 1fr;
+        width: 100%;
+        background-color: pink;
+        padding-bottom: 20px;
     }
     footer p {
         width: auto;
         height: auto;
         margin-right: 50px;
     }
+
+    footer > div {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    footer > div > p {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
     .rrss {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        
     }
 
 }
